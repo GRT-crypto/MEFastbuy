@@ -40,7 +40,6 @@
     }
 
     document.addEventListener("DOMContentLoaded", async function () {
-        addStatusToNavbar();
         const isMainPage = location.href.match(/^https:\/\/magiceden.io\/$/);
         const isMarketplace = location.href.match(/^https:\/\/magiceden.io\/marketplace\/*/);
         const isItemDetails = location.href.match(/^https:\/\/magiceden.io\/item-details\/*/);
@@ -86,6 +85,7 @@
         }
     }
     async function handleNftPage() {
+        addStatusToNavbar();
         let everyNFTVisibleOnPage;
         while (true) {
             everyNFTVisibleOnPage = document.getElementsByClassName('pb-0');
